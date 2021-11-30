@@ -22,6 +22,7 @@ body {
     display: inline-block
     
 }
+
 .nav-icons ul  {
 margin: 0px 12px;
 }
@@ -90,23 +91,96 @@ border-radius: 6px;
 .work-with-us {
 
 }
-.main-content {
-    margin-top: 120px;
-    background: rgba(255, 255, 255, 0.2);
-/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+.main-content1 {
+ 
+background: rgba(255, 255, 255, 0.2);
 backdrop-filter: blur( 14px );
 -webkit-backdrop-filter: blur( 14px );
 border-radius: 10px;
-/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+.testing {
+  height: 130px;
+}
+.bg-icons {
+  
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 380px;
+}
+.bg-icons2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 265px;
+  margin: 17px;
+}
+.bg-icons3 {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  z-index: -1;
+  width: 250px;
+  margin: 20px;
+}
+.bg-icons4 {
+  position: absolute;
+  left: 0px;
+  top: -70px;
+  z-index: -1;
+  width: 350px;
+  margin: 0px;
+}
+.work-heading p {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content2 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur( 14px );
+-webkit-backdrop-filter: blur( 14px );
+border-radius: 10px;
+}
+.main-content3 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur( 14px );
+-webkit-backdrop-filter: blur( 14px );
+border-radius: 10px;
+}
+.main-content4 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur( 14px );
+-webkit-backdrop-filter: blur( 14px );
+border-radius: 10px;
+}
+.what-wrapper {
+  position: relative;
+  padding-top: 190px;
+  padding-bottom: 120px;
+}
+.staking-wrapper {
+  position: relative;
+  /* height: 800px; */
+  padding-top: 190px;
 }
 .work-wrapper {
-    position: relative;
-    height: 820px;
-    background-image: url(../assets/dd.png);
+     position: relative;
+   /* height: 800px; */
+   padding-top: 170px;
+    /*  background-image: url(../assets/dd.png);
   
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 /* .work-with-bg {
     width: 7.7rem;
@@ -141,15 +215,19 @@ margin: 1px 12px;
     padding-top: 130px;
     padding-bottom: 130px;
 }
-.main-content {
-    padding-top: 50px;
-    margin-top: 50px;
-    padding-bottom: 100px;
-}
+
 .card .card-img-top {
     width: 80px;
     margin-left: auto;
     margin-right: auto;
+}
+.card .card-custom-top1 {
+    width: 190px;
+}
+.card .card-custom-top3 {
+    width: 190px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 .card-group-wrapper {
     padding-top: 70px;
@@ -166,7 +244,7 @@ margin: 1px 12px;
 }
 .card-1 {
     border: 2px solid #D6DFF6 !important;
-    box-shadow: 0 8px 32px 0 #D6DFF6;
+    box-shadow: 0 8px 12px 0 #D6DFF6;
     margin-right:50px;
     margin-left: 50px;
     background-color: #F6F7F9 !important;
@@ -179,12 +257,9 @@ margin: 1px 12px;
 }
 .stake-wrapper {
     position: relative;
-    height: 420px;
-    /* background-image: url(../assets/dd.png); */
-    height: 632px;
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding-top: 170px;
+margin-top: 120px;
+
 }
 
 .card-2 .btn-stake {
@@ -260,16 +335,19 @@ ul {
   background-position: 100% 100%;
 }
 .footer-logo {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 .footer-logo img {
-    max-width: 200px;
+    max-width: 70px;
+    margin-top: 12px;
+    margin-bottom: 6px;
 }
 .footer-text p {
   margin-bottom: 14px;
-  font-size: 14px;
+  font-size: 10px;
       color: #7e7e7e;
-  line-height: 28px;
+  line-height: 20px;
+  font-family: Montserrat-Medium;
 }
 .footer-social-icon span {
   color: #fff;
@@ -301,11 +379,13 @@ ul {
   background: #DD4B39;
 }
 .footer-widget-heading h3 {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 40px;
+  /* color: #fff; */
+  font-size: 14px;
+  font-weight: 500;
+  /* margin-bottom: 10px; */
+  margin-top: 10px;
   position: relative;
+  font-family: Montserrat-Medium;
 }
 .footer-widget-heading h3::before {
   content: "";
@@ -316,29 +396,39 @@ ul {
   width: 50px;
 
 }
+.footer-content {
+  margin-top: 18px;
+}
 .footer-widget ul li {
   display: inline-block;
   float: left;
-  width: 50%;
-  margin-bottom: 12px;
+  width: 60%;
+  margin-bottom: 2px;
 }
 .footer-widget ul li a:hover{
   color: #ff5e14;
 }
 .footer-widget ul li a {
-  color: #878787;
+  color: #02293E;
   text-transform: capitalize;
+  font-size: 12px;
+  font-family: Montserrat-Medium;
 }
 .subscribe-form {
   position: relative;
   overflow: hidden;
+  margin: 10px 0px;
 }
 .subscribe-form input {
-  width: 100%;
-  padding: 14px 28px;
+  padding: 8px 18px;
+  width: 330px;
   background: #F2F4F8;
   border: 1px solid #F2F4F8;
   color: #fff;
+  margin-top: 12px;
+}
+.footer-logo-text {
+  width: 75%;
 }
 .subscribe-form button {
     position: absolute;
@@ -347,6 +437,9 @@ ul {
     padding: 13px 20px;
     border: 1px solid #ff5e14;
     top: 0;
+}
+.footer-widget {
+ 
 }
 .subscribe-form button i {
   color: #fff;
@@ -359,6 +452,8 @@ ul {
 }
 .copyright-text p {
   margin: 0;
+  margin-left: 50px;
+  margin-top: 50px;
   font-size: 14px;
   color: #878787;
 }
@@ -376,4 +471,137 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+.footer-content  {
+  background-color: #ECEFF4;
+}
+.send-form input {
+  padding: 8px 18px;
+ 
+  background: #F2F4F8;
+  border: 1px solid #F2F4F8;
+  color: #fff;
+  margin-top: 12px;
+} 
+.send-form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #878787;
+  font-size: 10px !important;
+  opacity: 1; /* Firefox */
+
+  text-transform: capitalize;
+  font-size: 12px;
+  font-family: Montserrat-Medium;
+}
+.send-form textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #878787;
+  font-size: 12px;
+  opacity: 1; /* Firefox */
+
+  text-transform: capitalize;
+  font-size: 10px !important;
+  font-family: Montserrat-Medium;
+}
+.send-form textarea {
+  padding: 8px 18px;
+ 
+  background: #F2F4F8;
+  border: 1px solid #F2F4F8;
+  color: #fff;
+  margin-top: 12px;
+} 
+.send-form {
+  /* width: 90%; */
+}
+.footer-top-text {
+  margin: 32px 60px;
+}
+.heading-footer {
+  color: #1092B2;
+    font-family: Montserrat-bold;
+    font-size: 36px;
+}
+.inner-text {
+  color: #02293E;
+  width: 90%;
+  margin-top: 14px;
+  font-size: 13px;
+}
+.send-btn{
+  background-color: #1092B2;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding: 5px 69px;
+    
+}
 /* ----------------------footer-css----------------------- */
+/* ----------------------staking-css----------------------- */
+.staking-inner-text {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #02293E;
+  font-family: Montserrat-Medium;
+  font-size: 13px;
+}
+
+.accordion .card-header:after {
+  font-family: 'FontAwesome';  
+  content: "\f107";
+  float: right; 
+  color: #1092B2;
+}
+.accordion .card-header.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\f054"; 
+}
+.accordion {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-header {
+  box-shadow: #02293E;
+  margin-bottom: 112px;
+}
+.accordion .card .card-header {
+  border-radius: 6px !important;
+  border: 1px solid #D6DFF6;
+  background-color: #F6F7F9;
+  /* box-shadow: 10px 2px 0px #D6DFF6; */
+  margin-bottom: 11px !important;
+}
+.card {
+
+  background-color: unset !important;
+ 
+}
+.staking-btn {
+  background-color: #1092B2;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 5px 19px;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+    font-family: Montserrat-Medium;
+}
+/* ----------------------skaking-css----------------------- */
+/* ----------------------invest-css----------------------- */
+.invest-title-text {
+color: #1092B2;
+}
+.btn-view {
+  background-color: #1092B2;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 5px 19px;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+    font-family: Montserrat-Medium;
+}
+/* ----------------------invest-css----------------------- */
