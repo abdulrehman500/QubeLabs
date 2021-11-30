@@ -91,12 +91,18 @@ border-radius: 6px;
 .work-with-us {
 
 }
+
+
+
 .main-content1 {
  
-background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur( 14px );
--webkit-backdrop-filter: blur( 14px );
-border-radius: 10px;
+  background: rgba(236, 239, 244, 0.82);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(236, 239, 244, 0.3);
+  padding-bottom: 120px;
 }
 .testing {
   height: 130px;
@@ -115,7 +121,7 @@ border-radius: 10px;
   top: 0px;
   z-index: -1;
   width: 265px;
-  margin: 17px;
+  margin: 70px;
 }
 .bg-icons3 {
   position: absolute;
@@ -141,26 +147,32 @@ border-radius: 10px;
 .main-content2 {
   padding-top: 40px;
   padding-bottom: 40px;
-  background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur( 14px );
--webkit-backdrop-filter: blur( 14px );
-border-radius: 10px;
+  background: rgba(236, 239, 244, 0.82);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(236, 239, 244, 0.3);
 }
 .main-content3 {
   padding-top: 40px;
   padding-bottom: 40px;
-  background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur( 14px );
--webkit-backdrop-filter: blur( 14px );
-border-radius: 10px;
+  background: rgba(236, 239, 244, 0.82);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(236, 239, 244, 0.3);
 }
 .main-content4 {
   padding-top: 40px;
   padding-bottom: 40px;
-  background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur( 14px );
--webkit-backdrop-filter: blur( 14px );
-border-radius: 10px;
+  background: rgba(236, 239, 244, 0.82);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(236, 239, 244, 0.3);
 }
 .what-wrapper {
   position: relative;
@@ -258,7 +270,7 @@ margin: 1px 12px;
 .stake-wrapper {
     position: relative;
     padding-top: 170px;
-margin-top: 120px;
+margin-top: 90px;
 
 }
 
@@ -605,3 +617,46 @@ color: #1092B2;
     font-family: Montserrat-Medium;
 }
 /* ----------------------invest-css----------------------- */
+/* ----------------------------------------------------------------------------------------Media-query-css----------------------- */
+/* Landscape phones and down */
+@media (max-width: 480px) {  
+  .footer-widget ul li a {
+  
+    margin-left: 46px;
+}
+.footer-widget-heading h3 {
+  margin-left: 42px;
+}
+.footer-text p {
+ margin-left: 42px;
+}
+.subscribe-form input {
+  
+  width: 180px;
+  margin-left: 12px;
+
+}
+.blue-btn {
+ 
+  margin: 10px 50px;
+}
+.banner-wrapper {
+  margin: 26px 32px;
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+  .footer-widget ul li a {
+  
+    margin-left: 46px;
+}
+ }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {  }
+
+/* Large desktop */
+@media (min-width: 1200px) {  }
+/* ---------------------------------------------------------------------------------------Media-query-css----------------------- */
