@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: Montserrat-regular;
-    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap');
+    src: url(../assets/fonts/Montserrat-Regular.ttf);
   }
 @font-face {
     font-family: Montserrat-bold;
@@ -14,6 +14,34 @@
     src: url(../assets/fonts/Montserrat-Medium.ttf);
   }
  
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+ #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
 body {
     background-color: #F6F7F9 !important;
 }
@@ -79,9 +107,15 @@ color: #02293E  !important;
     font-family: Montserrat-bold;
 }
 .navbar-brand img {
-width: 70px;
+
+    width: 130px;
+
 }
 
+.banner-btn:hover {
+
+  background-color: #81C1E1;
+}
 .banner-btn {
 background-color: #1092B2;
 color: rgb(250, 248, 248);
@@ -91,14 +125,16 @@ border-radius: 6px;
 .work-with-us {
 
 }
-
+.card-custom {
+  margin-top: 12px;
+}
 
 
 .main-content1 {
  
   background: rgba(236, 239, 244, 0.82);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(236, 239, 244, 0.3);
@@ -247,24 +283,29 @@ margin: 1px 12px;
 
 .card-title-text1 {
     color: #1092B2;
+    font-family: Montserrat-Medium;
 }
 .card-title-text2 {
     color: #FE7D1E;
+    font-family: Montserrat-Medium;
+    
 }
 .card-title-text3 {
     color: #1092B2;
+    font-family: Montserrat-Medium;
 }
 .card-1 {
     border: 2px solid #D6DFF6 !important;
-    box-shadow: 0 8px 12px 0 #D6DFF6;
+    box-shadow: 0 0px 12px #00000015;
+    border-radius: 10px !important;
     margin-right:50px;
     margin-left: 50px;
-    background-color: #F6F7F9 !important;
+    background-color: #ffffff !important;
     border-radius: 8px;
 }
 .card-inner-text {
     font-size: 12px;
-    /* font-family: Montserrat-regular; */
+    font-family: Montserrat-regular;
     color: #02293E;
 }
 .stake-wrapper {
@@ -273,7 +314,14 @@ margin: 1px 12px;
 margin-top: 90px;
 
 }
-
+.tabs-body-text h5 {
+  font-size: 26px;
+  font-family: Montserrat-bold;
+}
+.tabs-body-text {
+  font-size: 12px;
+  font-family: Montserrat-regular;
+}
 .card-2 .btn-stake {
     background-color: #1092B2;
     color: white;
@@ -287,7 +335,7 @@ margin-top: 90px;
 }
 .card-2 {
  
-    box-shadow: 0 8px 32px 0 #D6DFF6;
+  box-shadow: 0 0px 12px #00000015;
     margin-right:50px;
     margin-left: 50px;
     background-color: #F8FAFD !important;
@@ -350,9 +398,8 @@ ul {
   margin-bottom: 12px;
 }
 .footer-logo img {
-    max-width: 70px;
-    margin-top: 12px;
-    margin-bottom: 6px;
+    max-width: 150px;
+  
 }
 .footer-text p {
   margin-bottom: 14px;
@@ -584,7 +631,7 @@ ul {
 }
 .card {
 
-  background-color: unset !important;
+  /* background-color: unset !important; */
  
 }
 .staking-btn {
