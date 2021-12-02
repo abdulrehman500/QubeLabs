@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.scss"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
-   <script>
-     
-   </script>
+   
+    <script src="js/cubes.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.35.1/tsparticles.min.js"></script>
     <title>QubeLabs</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-              <a class="nav-link" href="#">Features <span class="sr-only">(current)</span></a>
+              <a class="nav-link nav-link-ltr" href="#">Features <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Staking</a>
@@ -55,13 +56,14 @@
 </header>
 
 
-<section class="hero-wrapper">
+
+<section class="hero-wrapper ">
 	<div class="container">
 	<div class="banner-wrapper">
     <div class="row">
 			<div class="col-sm-6 ">
 
-			<div data-animate-in="up" class="banner-inner-text">
+			<div data-animate-in="up" class="banner-inner-text ">
         <h2><span>Qube</span> partners with high-potential blockchain projects.</h2>
 				<p  >Professional investors, blockchain strategists and social-media influencers, investing in a decentralized future.
         </p>
@@ -72,14 +74,50 @@
 			</div>
 			</div>
 			</div>
-			<div class="col-sm-6 ">
-			
-				<img  src="assets/banner-inner.png" class="img-fluid mx-auto" alt="">
+			<div class="col-sm-6">
+
+			<!-- -------------------------------------------------------------------------------cubes------------------------ -->
+      <div class="cube">
+        <div class="cube-face cube-face-front"></div>
+        <div class="cube-face cube-face-left"></div>
+        <div class="cube-face cube-face-back"></div>
+        <div class="cube-face cube-face-right"></div>
+        <div class="cube-face cube-face-top"></div>
+        <div class="cube-face cube-face-bottom"></div>
+      </div>
+      <div class="cube-two">
+        <div class="cube-face-two cube-face-front"></div>
+        <div class="cube-face-two cube-face-back"></div>
+        <div class="cube-face-two cube-face-right"></div>
+        <div class="cube-face-two cube-face-left"></div>
+        <div class="cube-face-two cube-face-top"></div>
+        <div class="cube-face-two cube-face-bottom"></div>
+      </div>
+      <div class="cube-three">
+        <div class="cube-face cube-face-front"></div>
+        <div class="cube-face cube-face-left"></div>
+        <div class="cube-face cube-face-back"></div>
+        <div class="cube-face cube-face-right"></div>
+        <div class="cube-face cube-face-top"></div>
+        <div class="cube-face cube-face-bottom"></div>
+      </div>
+<div id="particles-js"></div>
+<!-- 
+<div class="count-particles">
+
+</div> -->
+
+<!-- -------------------------------------------------------------------------------cubes------------------------ -->
+				<!-- <img  src="assets/banner-inner.png" class="img-fluid mx-auto" alt=""> -->
+			</div>
 			</div>
 		</div>
   </div>
 	</div>
 </section>
+
+
+
 <section class="work-wrapper" id="second-section">
   <img class="bg-icons" src="./assets/work-bg.png" alt="">
 <div class="container">
@@ -588,7 +626,140 @@ $(function() {
 });
 
 
+// --------------------------------------------------------------------------------particles
 
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 230,
+      "density": {
+        "enable": true,
+        "value_area": 1200
+      }
+    },
+    "color": {
+      "value": "#1092B2"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#1092B2"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.2,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#1092B2",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 4,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+/* ---- stats.js config ---- */
+
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+// --------------------------------------------------------------------------------particles
 var observer = new IntersectionObserver(function(entries) {
   alert("s");
   entries.forEach(e =>{

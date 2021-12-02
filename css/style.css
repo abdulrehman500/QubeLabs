@@ -36,14 +36,231 @@
     padding: 14px;
     text-decoration: none;
   }
-  
-  .content {
-    padding: 16px;
+  .nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #031D44;
   }
+  .nav-item a:hover {
+font-size: 12px;
+color: #b9ada9 !important;
+  }
+/* --------------------------------------------------------------------------particles-------------- */
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  margin-top: 20px;
+  width: 100%;
+  height: 130%;
+  z-index: -10;
+  /* background-color: #b61924; */
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+/* 
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+} */
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+.cube{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 200px;
+  left: 50%;
+  margin-left: -05px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg) translateZ(-200px);
+  -webkit-animation-name: rotationMainContainer;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+.cube-two{ 
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 300px;
+  left: 70%;
+  margin-left: -75px;
   
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg) translateZ(-200px);
+  
+  -webkit-animation-name: rotationMainContainer;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+.cube-three{
+  width: 110px;
+  height: 100px;
+  position: relative;
+  top: 180px;
+  left: 30%;
+  margin-left: -75px;
+  
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg) translateZ(-200px);
+  
+  -webkit-animation-name: rotationMainContainer;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+
+.cube-face{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  opacity: .95;
+  background: #ff033e;
+  
+  -webkit-transform-origin: 50% 50%;
+  
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+
+.cube-face-two{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  opacity: .95;
+  background: #ff033e;
+  
+  -webkit-transform-origin: 50% 50%;
+  
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+
+
+.cube-face-front{
+  -webkit-transform: translateZ(75px);
+  -webkit-animation-name: bgCAFace;
+}
+
+.cube-face-left{
+  -webkit-transform: rotateY(90deg) translateZ(75px);
+  -webkit-animation-name: bgCALeft;
+}
+
+.cube-face-back{
+  -webkit-transform: translateZ(-75px);
+  -webkit-animation-name: bgCABack;
+}
+
+.cube-face-right{
+  -webkit-transform: rotateY(90deg) translateZ(-75px);
+  -webkit-animation-name: bgCARight;
+}
+
+.cube-face-top{
+  -webkit-transform: rotateX(90deg) translateZ(-75px);
+  -webkit-animation-name: bgCATopBottom;
+}
+
+.cube-face-bottom{
+  -webkit-transform: rotateX(90deg) translateZ(75px);
+  -webkit-animation-name: bgCATopBottom;
+}
+
+@-webkit-keyframes rotationMainContainer{
+  0%   { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) }
+}
+
+@-webkit-keyframes bgCAFace{
+  0%  { background: #a7a7a7; }
+  25%  { background: #d4d0d1; }
+  50% { background: #e2dddf; }
+  100%   { background: #d4d0d1; }
+}
+
+@-webkit-keyframes bgCALeft{
+  0%  { background: #a7a7a7; }
+  25%  { background: #d4d0d1; }
+  50% { background: #e2dddf; }
+  100%   { background: #d4d0d1; }
+}
+
+@-webkit-keyframes bgCABack{
+  0%  { background: #a7a7a7; }
+  25%  { background: #d4d0d1; }
+  50% { background: #e2dddf; }
+  100%   { background: #d4d0d1; }
+}
+
+@-webkit-keyframes bgCARight{  
+  0%  { background: #a7a7a7; }
+  25%  { background: #d4d0d1; }
+  50% { background: #e2dddf; }
+  100%   { background: #d4d0d1; }
+}
+
+@-webkit-keyframes bgCATopBottom{
+  0%  { background: #a7a7a7; }
+  25%  { background: #d4d0d1; }
+  50% { background: #e2dddf; }
+  100%   { background: #d4d0d1; }
+}
+/* --------------------------------------------------------------------------particles-------------- */
+  .hero-wrapper {
+    height: 700px;
+  }
   .sticky {
     position: fixed;
-    top: 0;
+    top: 10;
     z-index: 999;
     width: 100%;
     border: 1px solid red;
@@ -102,7 +319,10 @@ font-family: 'Montserrat-Medium', sans-serif;
 color: #02293E  !important;
 }
 .banner-wrapper {
-    margin: 162px 32px;
+    margin: 1px 32px;
+}
+.banner-inner-text  {
+  margin-top: 25%;
 }
 .banner-inner-text h2 {
     font-family: Montserrat-bold;
@@ -758,6 +978,133 @@ color: #1092B2;
   transition: none;
   transform: none
 }
+
+
+/* -------------------------------------------------------------------------------------------------animation cubes------------------------------- */
+.cubes .cube {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+}
+@keyframes cube-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+.cubes .cube * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.cubes .cube .shadow {
+  background: #acaeaf;
+  top: 40%;
+}
+.cubes .cube .sides {
+  transform-style: preserve-3d;
+  perspective: 600px;
+}
+.cubes .cube .sides div {
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.cubes .cube .sides .front {
+  transform: rotateY(0deg) translateZ(50px);
+}
+.cubes .cube .sides .back {
+  transform: rotateY(-180deg) translateZ(50px);
+}
+.cubes .cube .sides .left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.cubes .cube .sides .right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+.cubes .cube .sides .top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+.cubes .cube .sides .bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+template {
+  display: block !important;
+}
+
+/* @import "compass/css3";
+{
+	 margin: 0;
+	 height: 100vh;
+	 perspective: 25em;
+} */
+body [class*="cube"] {
+	 position: absolute;
+}
+ .cube {
+  top: 24%;
+  left: 70%
+	 transform-style: preserve-3d;
+	 font-size: 8vmin;
+	 animation: ani 8s ease-in-out infinite;
+}
+ .cube__face {
+	 margin: -2em;
+	 width: 4em;
+	 height: 4em;
+	 backface-visibility: hidden;
+	 --i: 0;
+	 --j: 1;
+	 transform: rotate3d(var(--i), var(--j), 0, var(--a)) translateZ(2em);
+	 background: linear-gradient(var(--ga), var(--gs));
+}
+ .cube__face:nth-child(n + 5) {
+	 --i: 1;
+	 --j: 0;
+   --gs: #feffaa, #b2ff90;
+}
+ .cube__face:nth-child(1) {
+	 --a: 0deg;
+	 --ga: 279deg;
+	 --gs: #feffaa, #b2ff90;
+}
+ .cube__face:nth-child(2) {
+	 --a: 90deg;
+	 --ga: 218deg;
+	 --gs: #fbc2eb, #a6c1ee;
+}
+ .cube__face:nth-child(3) {
+	 --a: 180deg;
+	 --ga: 197deg;
+	 --gs: #84fab0, #8fd3f4;
+}
+ .cube__face:nth-child(4) {
+	 --a: 270deg;
+	 --ga: 112deg;
+	 --gs: #a1c4fd, #c2e9fb;
+}
+ .cube__face:nth-child(5) {
+	 --a: pow(-1, 4) * 90deg;
+	 --ga: 334deg;
+	 --gs: #f6d365, #fda085;
+}
+ .cube__face:nth-child(6) {
+	 --a: pow(-1, 5) * 90deg;
+	 --ga: 179deg;
+	 --gs: #ffecd2, #fcb69f;
+}
+ @keyframes ani {
+	 from {
+		 transform: rotateY(2turn) rotateX(2turn);
+	}
+	 to {
+		 transform: rotateY(1turn) rotateX(1turn);
+	}
+}
+ 
+/* -------------------------------------------------------------------------------------------------animation cubes------------------------------- */
 /* ----------------------------------------------------------------------------------------Media-query-css----------------------- */
 /* Landscape phones and down */
 @media (max-width: 480px) {  
@@ -783,6 +1130,9 @@ color: #1092B2;
 }
 .banner-wrapper {
   margin: 26px 32px;
+}
+.cube, .cube-two,.cube-three {
+  display: none;
 }
 }
 
