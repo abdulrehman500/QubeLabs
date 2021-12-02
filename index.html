@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+   <script>
+     
+   </script>
     <script src="js/custom.js"></script>
     <title>QubeLabs</title>
 </head>
@@ -14,7 +17,7 @@
 
 <header>
     <div class="container">
-    <nav class="navbar  navbar-expand-lg navbar-light ">
+    <nav class="navbar  navbar-expand-lg navbar-light  " id="navbar">
         <a class="navbar-brand" href="#"><img src="assets/main-logo.svg" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -51,23 +54,20 @@
       </nav>
 </header>
 
-<!-- <div id="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div> -->
+
 <section class="hero-wrapper">
 	<div class="container">
 	<div class="banner-wrapper">
     <div class="row">
-			<div class="col-sm-6">
-			<div class="banner-inner-text">
+			<div class="col-sm-6 ">
+
+			<div data-animate-in="up" class="banner-inner-text">
         <h2><span>Qube</span> partners with high-potential blockchain projects.</h2>
-				<p>Professional investors, blockchain strategists and social-media influencers, investing in a decentralized future.
+				<p  >Professional investors, blockchain strategists and social-media influencers, investing in a decentralized future.
         </p>
 				<div>
 	
-					<a href="https://utorsols.com/contact-us" class=" banner-btn">Learn more</a>
+					<a  href="https://utorsols.com/contact-us" class=" banner-btn">Learn more</a>
 		
 			</div>
 			</div>
@@ -80,11 +80,11 @@
   </div>
 	</div>
 </section>
-<section class="work-wrapper">
+<section class="work-wrapper" id="second-section">
   <img class="bg-icons" src="./assets/work-bg.png" alt="">
 <div class="container">
-  <div class="main-content1 ">
-    <div class="work-heading pt-4 text-center">
+  <div class="main-content1 " data-animate-in="up">
+    <div  class="work-heading pt-4 text-center">
 
      <h1>Work with us</h1>
       <p class="mt-3">Here are some reasons why you will make the best decision by choosing us.</p>
@@ -121,9 +121,9 @@
 <section class="stake-wrapper ">
   <img class="bg-icons2" src="./assets/ast/boxs.png" alt="">
   <div class="container">
-    <div class="main-content2">
+    <div class="main-content2" data-animate-in="up">
      
-      <div class="work-heading text-center">
+      <div  class="work-heading text-center">
   
          <h1>Stake with us</h1>
         <p class="mt-3">Earn passive income in crypto by delegating your idle tokens.
@@ -256,12 +256,13 @@
   <section class="staking-wrapper ">
     <img class="bg-icons3" src="./assets/ast/box.png" alt="">
     <div class="container">
-      <div class="main-content3">
+      <div class="main-content3" data-animate-in="up">
         <div class="work-heading text-center">
     
            <h1>Invest with us</h1>
           <p class="mt-3 staking-inner-text ">These are some of the brands that trust us.
           </p>
+ 
         </div>
         <div class="card-group card-group-wrapper ">
           <div class="card card-1 text-center ">
@@ -297,7 +298,7 @@
       <div class="what-wrapper ">
         <img class="bg-icons4" src="./assets/ast/start.png" alt="">
         <div class="container">
-          <div class="main-content4">
+          <div class="main-content4" data-animate-in="up">
             <div class="work-heading text-center">
         
                <h1>What is Staking?</h1>
@@ -305,8 +306,9 @@
             </div>
             <div class="accordion">
               <div id="accordion" class="accordion">
-                <div class=" mb-0">
-                    <div class="card-header collapsed " data-toggle="collapse" href="#collapseOne">
+                <div class=" mb-0">        
+                   <!-- <button class="arrow">dd</button> -->
+                    <div class="card-header rotate collapsed " data-toggle="collapse" href="#collapseOne">
                         <a class="card-title">
                           What is proof of stake in blockchain?
                         </a>
@@ -493,9 +495,118 @@
 
 
 
-
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+$(function() {
+  
+  var html = $('html');
+  // Detections
+  if (!("ontouchstart" in window)) {
+    html.addClass("noTouch");
+  }
+  if ("ontouchstart" in window) {
+    html.addClass("isTouch");
+  }
+  if ("ontouchstart" in window) {
+    html.addClass("isTouch");
+  }
+  if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+    if (navigator.appVersion.indexOf("Trident") === -1) {
+      html.addClass("isEDGE");
+    } else {
+      html.addClass("isIE isIE11");
+    }
+  }
+  if (navigator.appVersion.indexOf("MSIE") !== -1) {
+    html.addClass("isIE");
+  }
+  if (
+    navigator.userAgent.indexOf("Safari") != -1 &&
+    navigator.userAgent.indexOf("Chrome") == -1
+  ) {
+    html.addClass("isSafari");
+  }
+
+  // On Screen
+
+  $.fn.isOnScreen = function() {
+    var elementTop = $(this).offset().top,
+      elementBottom = elementTop + $(this).outerHeight(),
+      viewportTop = $(window).scrollTop(),
+      viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+
+  function detection() {
+    for (var i = 0; i < items.length; i++) {
+      var el = $(items[i]);
+
+      if (el.isOnScreen()) {
+        el.addClass("in-view");
+      } else {
+        el.removeClass("in-view");
+      }
+    }
+  }
+
+  var items = document.querySelectorAll(
+    "*[data-animate-in], *[data-detect-viewport]"
+  ),
+    waiting = false,
+    w = $(window);
+
+  w.on("resize scroll", function() {
+    if (waiting) {
+      return;
+    }
+    waiting = true;
+    detection();
+
+    setTimeout(function() {
+      waiting = false;
+    }, 100);
+  });
+
+  $(document).ready(function() {
+    setTimeout(function() {
+      detection();
+    }, 500);
+
+    for (var i = 0; i < items.length; i++) {
+      var d = 0,
+        el = $(items[i]);
+      if (items[i].getAttribute("data-animate-in-delay")) {
+        d = items[i].getAttribute("data-animate-in-delay") / 1000 + "s";
+      } else {
+        d = 0;
+      }
+      el.css("transition-delay", d);
+    }
+  });
+});
+
+
+
+var observer = new IntersectionObserver(function(entries) {
+  alert("s");
+  entries.forEach(e =>{
+      let element = e.target;
+      if(e.isIntersecting === true){
+          element.classList.remove("not-visible");
+          element.classList.add("visible");
+      }else{
+          element.classList.remove("visible");
+          element.classList.add("not-visible");
+      }
+  });
+}, { threshold: [0] });
+
+observer.observe(document.querySelector("#first-section"));
+observer.observe(document.querySelector("#second-section"));
+observer.observe(document.querySelector("#third-section"));
+observer.observe(document.querySelector("#fourth-section"));
+</script>
 </body>
 </html>

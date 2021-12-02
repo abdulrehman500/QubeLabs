@@ -1,17 +1,35 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+// register event handler
 
-// Get the navbar
-var navbar = document.getElementById("navbar");
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  const $toggle = $('.arrow');
+
+ $toggle.on('click', function() {
+   alert("dd");
+   if ($(this).hasClass('active1')) {
+     $(this).removeClass('active1');
+   } else {
+     $(this).addClass('active1');
+   }
+ });
+
+ 
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 450) {
+        document.getElementById('navbar').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      } 
+  });
+});
+
+
+

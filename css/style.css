@@ -15,10 +15,19 @@
   }
  
   #navbar {
+
     overflow: hidden;
-    background-color: #333;
-  }
   
+
+  }
+  .fixed-top {
+    margin-left: auto;
+    margin-right: auto;
+   width: 1200px !important; 
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+    background-color: #ffffff !important;
+ }
  #navbar a {
     float: left;
     display: block;
@@ -35,7 +44,9 @@
   .sticky {
     position: fixed;
     top: 0;
+    z-index: 999;
     width: 100%;
+    border: 1px solid red;
   }
   
   .sticky + .content {
@@ -63,6 +74,11 @@ margin: 0px 12px;
 }
 .nav-icons {
     display: inline-flex;
+}
+.nav-icons .btn:hover {
+  text-decoration: none;
+  background-color: #81C1E1;
+  color: white;
 }
 .nav-icons .btn{
   background-color: #1092B2;
@@ -113,8 +129,9 @@ color: #02293E  !important;
 }
 
 .banner-btn:hover {
-
+  text-decoration: none;
   background-color: #81C1E1;
+  color: white;
 }
 .banner-btn {
 background-color: #1092B2;
@@ -185,7 +202,7 @@ border-radius: 6px;
   padding-bottom: 40px;
   background: rgba(236, 239, 244, 0.82);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(236, 239, 244, 0.3);
@@ -322,6 +339,11 @@ margin-top: 90px;
   font-size: 12px;
   font-family: Montserrat-regular;
 }
+.card-2 .btn-stake:hover {
+  text-decoration: none;
+  background-color: #81C1E1;
+  color: white;
+}
 .card-2 .btn-stake {
     background-color: #1092B2;
     color: white;
@@ -343,6 +365,11 @@ margin-top: 90px;
 
     padding: 12px 12px;
 } 
+.blue-btn:hover {
+  text-decoration: none;
+  background-color: #81C1E1;
+  color: white;
+}
 .blue-btn {
     background-color: #1092B2;
     color: white;
@@ -584,6 +611,11 @@ ul {
   margin-top: 14px;
   font-size: 13px;
 }
+.send-btn:hover {
+  text-decoration: none;
+  background-color: #81C1E1;
+  color: white;
+}
 .send-btn{
   background-color: #1092B2;
     color: white;
@@ -593,6 +625,7 @@ ul {
     
 }
 /* ----------------------footer-css----------------------- */
+
 /* ----------------------staking-css----------------------- */
 .staking-inner-text {
   width: 60%;
@@ -601,6 +634,7 @@ ul {
   color: #02293E;
   font-family: Montserrat-Medium;
   font-size: 13px;
+
 }
 
 .accordion .card-header:after {
@@ -608,10 +642,15 @@ ul {
   content: "\f107";
   float: right; 
   color: #1092B2;
+
 }
+
 .accordion .card-header.collapsed:after {
-  /* symbol for "collapsed" panels */
+
+  font-family: 'FontAwesome';  
   content: "\f054"; 
+
+
 }
 .accordion {
   width: 80%;
@@ -651,6 +690,11 @@ ul {
 .invest-title-text {
 color: #1092B2;
 }
+.btn-view:hover {
+  text-decoration: none;
+  background-color: #81C1E1;
+  color: white;
+}
 .btn-view {
   background-color: #1092B2;
   color: white;
@@ -664,6 +708,56 @@ color: #1092B2;
     font-family: Montserrat-Medium;
 }
 /* ----------------------invest-css----------------------- */
+
+/*Animations*/
+
+[data-animate-in] {
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease
+}
+
+[data-animate-in="up"] {
+  transform: translate3d(0, 124px, 0)
+}
+
+[data-animate-in="left"] {
+  transform: translate3d(-25%, 0, 0)
+}
+
+[data-animate-in="right"] {
+  transform: translate3d(25%, 0, 0)
+}
+
+[data-animate-in="down"] {
+  transform: translate3d(0, -24px, 0)
+}
+
+[data-animate-in="fadeIn"] {
+  transform: translate3d(10, 10, 10)
+}
+
+[data-animate-in].in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transition: transform 1.6s ease, opacity 1.6s ease
+}
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease
+}
+
+.page-loaded .fade-in,.page-loaded.fade-in {
+  opacity: 1
+}
+
+.isSafari.isTouch [data-animate-in],.isSafari.isTouch [data-animate-in="up"] {
+  opacity: 1;
+  transition: none;
+  transform: none
+}
 /* ----------------------------------------------------------------------------------------Media-query-css----------------------- */
 /* Landscape phones and down */
 @media (max-width: 480px) {  
@@ -698,6 +792,10 @@ color: #1092B2;
   .footer-widget ul li a {
   
     margin-left: 46px;
+}
+.fixed-top {
+  width: 349px !important;
+
 }
  }
 
