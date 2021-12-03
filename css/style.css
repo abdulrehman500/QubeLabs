@@ -1134,6 +1134,29 @@ body [class*="cube"] {
 .cube, .cube-two,.cube-three {
   display: none;
 }
+.bg-icons3 {
+  position: absolute;
+  right: 0px;
+  top: 77px;
+  z-index: -1;
+  width: 146px;
+  margin: 20px;
+}
+.bg-icons2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 165px;
+  margin: 70px;
+}
+.bg-icons {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 180px;
+}
 }
 
 /* Landscape phone to portrait tablet */
@@ -1146,6 +1169,29 @@ body [class*="cube"] {
 .fixed-top {
   width: 349px !important;
 
+}
+.bg-icons3 {
+  position: absolute;
+  right: 0px;
+  top: 77px;
+  z-index: -1;
+  width: 146px;
+  margin: 20px;
+}
+.bg-icons2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 165px;
+  margin: 70px;
+}
+.bg-icons {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 180px;
 }
  }
 
