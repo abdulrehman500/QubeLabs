@@ -14,6 +14,15 @@
     src: url(../assets/fonts/Montserrat-Medium.ttf);
   }
  
+
+
+
+
+
+
+
+
+
   #navbar {
 
     overflow: hidden;
@@ -47,6 +56,10 @@
 font-size: 12px;
 color: #b9ada9 !important;
   }
+  /* <!-- -------------------------------------------------------------------------------cubes-3d----------------------- --> */
+  
+  /* <!-- -------------------------------------------------------------------------------cubes-3d----------------------- --> */
+
 /* --------------------------------------------------------------------------particles-------------- */
 canvas {
   display: block;
@@ -69,22 +82,7 @@ canvas {
 }
 
 /* ---- stats.js ---- */
-/* 
-.count-particles{
-  background: #000022;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
-  text-align: left;
-  text-indent: 4px;
-  line-height: 14px;
-  padding-bottom: 2px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-} */
+
 
 .js-count-particles{
   font-size: 1.1em;
@@ -105,6 +103,7 @@ canvas {
 }
 
 .cube{
+  -webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
   width: 50px;
   height: 50px;
   position: relative;
@@ -114,7 +113,7 @@ canvas {
   -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateY(0deg) translateZ(-200px);
   -webkit-animation-name: rotationMainContainer;
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 25s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
@@ -131,14 +130,14 @@ canvas {
   -webkit-transform: rotateY(0deg) translateZ(-200px);
   
   -webkit-animation-name: rotationMainContainer;
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 25s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
 }
 .cube-three{
-  width: 110px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   position: relative;
   top: 180px;
   left: 30%;
@@ -148,7 +147,7 @@ canvas {
   -webkit-transform: rotateY(0deg) translateZ(-200px);
   
   -webkit-animation-name: rotationMainContainer;
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 12s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
@@ -160,13 +159,12 @@ canvas {
   position: absolute;
   opacity: .95;
   background: #ff033e;
-  
   -webkit-transform-origin: 50% 50%;
-  
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 29s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
+  -webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3),
 }
 
 .cube-face-two{
@@ -174,19 +172,20 @@ canvas {
   height: 150px;
   position: absolute;
   opacity: .95;
-  background: #ff033e;
+  background: #d4d0d1;
   
   -webkit-transform-origin: 50% 50%;
   
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 15s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
+  -webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3),
 }
 
 
 .cube-face-front{
-  -webkit-transform: translateZ(75px);
+  -webkit-transform: translateZ(05px);
   -webkit-animation-name: bgCAFace;
 }
 
@@ -217,6 +216,14 @@ canvas {
 
 @-webkit-keyframes rotationMainContainer{
   0%   { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+
+  100% { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) }
+}
+@-webkit-keyframes rotationMainContainer1{
+  0%   { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  25% { -webkit-transform: rotateX(60deg) rotateY(60deg) rotateZ(60deg) }
+  50% { -webkit-transform: rotateX(120deg) rotateY(120deg) rotateZ(120deg) }
+  75% { -webkit-transform: rotateX(220deg) rotateY(220deg) rotateZ(220deg) }
   100% { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) }
 }
 
@@ -347,6 +354,250 @@ color: #02293E  !important;
     width: 130px;
 
 }
+
+/* --------------------------------------------------------------------------------------------------cubes-csss */
+.container1{
+  position: absolute;
+  top: 90%;
+  left: 70%;
+  perspective: 1500px;
+}
+
+
+.cube1{
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 15s linear infinite;
+}
+.cube2{
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 15s linear infinite;
+}
+
+
+
+.cube{
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0,0,0,0);
+  }
+  
+  100% {
+    transform: rotate3d(1,1,1,360deg);
+  }
+}
+
+.cube1 > div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 2;
+  /* border: 2px solid: #fff; */
+}
+
+
+.front {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) translateY(-50px) translateZ(50px);
+}
+
+.back {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) translateY(-50px) translateZ(-50px);
+}
+
+.left {
+  background: rgb(214 233 240);
+  /* transform: translateY(-200px) translateX(-400px) rotateY(90deg); */
+  transform: translateY(-50px) translateX(-150px) rotateY(
+    90deg)
+}
+
+.right {
+  background: rgb(214 233 240);
+  /* transform: translateY(-200px) rotateY(90deg); */
+  transform: translateY(-50px) translateX(-50px) rotateY(
+    90deg)
+}
+
+.top {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) translateY(-100px) rotateX(
+    90deg)
+  /* transform: translateX(-200px) translateY(-400px) rotateX(90deg); */
+}
+
+.bottom {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) rotateX(90deg);
+}
+
+
+
+/* ---------------------------------------------------------- cubes-csss*/
+/* ---------------------------------------------------------- -------------------------cubes-css-1*/
+.container2{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  perspective: 1500px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0,0,0,0);
+  }
+  
+  100% {
+    transform: rotate3d(1,1,1,360deg);
+  }
+}
+
+.cube2 > div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 2;
+  /* border: 2px solid: #fff; */
+}
+
+/* .front2 {
+  background: red;
+
+  transform: translateX(-90px) translateY(-90px) translateZ(100px);
+}
+
+.back2 {
+  background: yellow;
+
+  transform: translateX(-80px) translateY(-80px) translateZ(-80px);
+}
+
+.left2 {
+  background: green;
+  transform: translateX(-70px) translateY(-80px) translateZ(80px)
+}
+
+.right2 {
+  background: rgb(214 233 240);
+  transform: translateY(-90px) rotateY(90deg);
+}
+
+.top2 {
+  background: rgb(214 233 240);
+  transform: translateX(-90px) translateY(-150px) rotateX(90deg);
+}
+
+.bottom2{
+  background: rgb(214 233 240);
+  transform: translateX(-90px) rotateX(90deg);
+} */
+
+.front2 {
+  background: rgb(214 233 240);
+  transform: translateX(-75px) translateY(-75px) translateZ(75px);
+}
+
+.back2 {
+  background: rgb(214 233 240);
+  transform: translateX(-75px) translateY(-75px) translateZ(-75px);
+}
+
+.left2 {
+  background: rgb(214 233 240);
+  transform: translateY(-75px) translateX(-150px) rotateY(90deg);
+}
+
+.right2 {
+  background: rgb(214 233 240);
+  transform: translateY(-75px) rotateY(90deg);
+}
+
+.top2 {
+  background: rgb(214 233 240);
+  transform: translateX(-75px) translateY(-150px) rotateX(90deg);
+}
+
+.bottom2 {
+  background: rgb(214 233 240);
+  transform: translateX(-75px) rotateX(90deg);
+}
+
+
+/* ---------------------------------------------------------- -------------------------cubes-css-1*/
+/* ---------------------------------------------------------- -------------------------cubes-css-2*/
+.container3{
+  position: absolute;
+  top: 110%;
+  left: 30%;
+  perspective: 1500px;
+}
+.cube3{
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0,0,0,0);
+  }
+  
+  100% {
+    transform: rotate3d(1,1,1,360deg);
+  }
+}
+
+.cube3 > div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 2;
+  /* border: 2px solid: #fff; */
+}
+.front3 {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) translateY(-50px) translateZ(50px);
+}
+
+.back3 {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) translateY(-50px) translateZ(-50px);
+}
+
+.left3 {
+  background: rgb(214 233 240);
+  /* transform: translateY(-200px) translateX(-400px) rotateY(90deg); */
+  transform: translateY(-50px) translateX(-50px) rotateY(
+    90deg)
+}
+
+.right3 {
+  background: rgb(214 233 240);
+  /* transform: translateY(-200px) rotateY(90deg); */
+  transform: translateY(-50px) translateX(-50px) rotateY(
+    90deg)
+}
+
+.top3 {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) translateY(-100px) rotateX(
+    90deg)
+  /* transform: translateX(-200px) translateY(-400px) rotateX(90deg); */
+}
+
+.bottom3 {
+  background: rgb(214 233 240);
+  transform: translateX(-100px) rotateX(90deg);
+}
+
+
+/* ---------------------------------------------------------- -------------------------cubes-css-2*/
+
 
 .banner-btn:hover {
   text-decoration: none;
