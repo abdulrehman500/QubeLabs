@@ -1458,10 +1458,28 @@ body [class*="cube"] {
   z-index: -1;
   width: 180px;
 }
+.container1 {
+ display: none;
+}
+.container2 {
+ display: none;
+}
+.container3 {
+ display: none;
+}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
+  .container1 {
+    display: none;
+   }
+   .container2 {
+    display: none;
+   }
+   .container3 {
+    display: none;
+   }
 
   .footer-widget ul li a {
   
@@ -1513,4 +1531,6 @@ body [class*="cube"] {
 
 /* Large desktop */
 @media (min-width: 1200px) {  }
+
+
 /* ---------------------------------------------------------------------------------------Media-query-css----------------------- */
