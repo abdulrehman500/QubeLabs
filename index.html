@@ -63,13 +63,13 @@
     <div class="row">
 			<div class="col-sm-6 ">
 
-			<div data-animate-in="up" class="banner-inner-text ">
+			<div data-animate-in="up" class="banner-inner-text reveal">
         <h2><span>Qube</span> partners with high-potential blockchain projects.</h2>
 				<p  >Professional investors, blockchain strategists and social-media influencers, investing in a decentralized future.
         </p>
 				<div>
 	
-					<a  href="https://utorsols.com/contact-us" class=" banner-btn">Learn more</a>
+					<a  href="#" class=" banner-btn">Learn more</a>
 		
 			</div>
 			</div>
@@ -117,10 +117,9 @@
 </section>
 
 
-
-<section class="work-wrapper" id="second-section">
+<section class="work-wrapper " id="second-section">
   <img class="bg-icons" src="./assets/work-bg.png" alt="">
-<div class="container">
+<div class="container  reveal">
   <div class="main-content1 " data-animate-in="up">
     <div  class="work-heading pt-4 text-center">
 
@@ -156,7 +155,7 @@
   </div>
 </section>
 
-<section class="stake-wrapper ">
+<section class="stake-wrapper reveal ">
   <img class="bg-icons2" src="./assets/ast/boxs.png" alt="">
   <div class="container">
     <div class="main-content2" data-animate-in="up">
@@ -291,10 +290,10 @@
   </section>
   <!-- -----------------------------------------------------------------------------------------------------invest -with -->
 
-  <section class="staking-wrapper ">
+  <section class="staking-wrapper  ">
     <img class="bg-icons3" src="./assets/ast/box.png" alt="">
     <div class="container">
-      <div class="main-content3" data-animate-in="up">
+      <div class="main-content3 reveal" data-animate-in="up">
         <div class="work-heading text-center">
     
            <h1>Invest with us</h1>
@@ -333,7 +332,7 @@
       </div>
       </div>
 
-      <div class="what-wrapper ">
+      <div class="what-wrapper reveal">
         <img class="bg-icons4" src="./assets/ast/start.png" alt="">
         <div class="container">
           <div class="main-content4" data-animate-in="up">
@@ -537,94 +536,146 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
-$(function() {
+
+// --------------------------------------------------------------------------------ON-Scroll-Reveal
+
+// $(function() {
   
-  var html = $('html');
-  // Detections
-  if (!("ontouchstart" in window)) {
-    html.addClass("noTouch");
-  }
-  if ("ontouchstart" in window) {
-    html.addClass("isTouch");
-  }
-  if ("ontouchstart" in window) {
-    html.addClass("isTouch");
-  }
-  if (document.documentMode || /Edge/.test(navigator.userAgent)) {
-    if (navigator.appVersion.indexOf("Trident") === -1) {
-      html.addClass("isEDGE");
-    } else {
-      html.addClass("isIE isIE11");
-    }
-  }
-  if (navigator.appVersion.indexOf("MSIE") !== -1) {
-    html.addClass("isIE");
-  }
-  if (
-    navigator.userAgent.indexOf("Safari") != -1 &&
-    navigator.userAgent.indexOf("Chrome") == -1
-  ) {
-    html.addClass("isSafari");
-  }
+//   var html = $('html');
+//   // Detections
+//   if (!("ontouchstart" in window)) {
+//     html.addClass("noTouch");
+//   }
+//   if ("ontouchstart" in window) {
+//     html.addClass("isTouch");
+//   }
+//   if ("ontouchstart" in window) {
+//     html.addClass("isTouch");
+//   }
+//   if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+//     if (navigator.appVersion.indexOf("Trident") === -1) {
+//       html.addClass("isEDGE");
+//     } else {
+//       html.addClass("isIE isIE11");
+//     }
+//   }
+//   if (navigator.appVersion.indexOf("MSIE") !== -1) {
+//     html.addClass("isIE");
+//   }
+//   if (
+//     navigator.userAgent.indexOf("Safari") != -1 &&
+//     navigator.userAgent.indexOf("Chrome") == -1
+//   ) {
+//     html.addClass("isSafari");
+//   }
 
-  // On Screen
+//   // On Screen
 
-  $.fn.isOnScreen = function() {
-    var elementTop = $(this).offset().top,
-      elementBottom = elementTop + $(this).outerHeight(),
-      viewportTop = $(window).scrollTop(),
-      viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
+//   $.fn.isOnScreen = function() {
+//     var elementTop = $(this).offset().top,
+        
+//       elementBottom = elementTop + $(this).outerHeight(),
+//       viewportTop = $(window).scrollTop(),
+//       viewportBottom = viewportTop + $(window).height();
+//     return elementBottom > viewportTop && elementTop < viewportBottom;
+//   };
 
-  function detection() {
-    for (var i = 0; i < items.length; i++) {
-      var el = $(items[i]);
+//   function detection() {
+//     for (var i = 0; i < items.length; i++) {
+//       var el = $(items[i]);
 
-      if (el.isOnScreen()) {
-        el.addClass("in-view");
+//       if (el.isOnScreen()) {
+//         el.addClass("in-view");
+//       } else {
+//         el.removeClass("in-view");
+//       }
+//     }
+//   }
+
+//   var items = document.querySelectorAll(
+//     "*[data-animate-in], *[data-detect-viewport]"
+//   ),
+//     waiting = false,
+//     w = $(window);
+
+//   w.on("resize scroll", function() {
+//     if (waiting) {
+//       return;
+//     }
+//     waiting = true;
+//     detection();
+
+//     setTimeout(function() {
+//       waiting = false;
+//     }, 100);
+//   });
+
+//   $(document).ready(function() {
+//     setTimeout(function() {
+//       detection();
+//     }, 300);
+
+//     for (var i = 0; i < items.length; i++) {
+//       var d = 0,
+//         el = $(items[i]);
+//       if (items[i].getAttribute("data-animate-in-delay")) {
+//         d = items[i].getAttribute("data-animate-in-delay") / 1000 + "s";
+//       } else {
+//         d = 0;
+//       }
+//       el.css("transition-delay", d);
+//     }
+//   });
+// });
+// --------------------------------------------------------------------------------ON-Custom-Scroll-Reveal
+
+// --------------------------------------------------------------------------------ON-Scroll-Reveal-Library
+
+var rafId = null;
+var delay = 200;
+var lTime = 0;
+
+function scroll() {
+  var scrollTop = $(window).scrollTop();
+  var height = $(window).height()
+  var visibleTop = scrollTop + height;
+  $('.reveal').each(function() {
+    var $t = $(this);
+    if ($t.hasClass('reveal_visible')) { return; }
+    var top = $t.offset().top;
+    if (top <= visibleTop) {
+      if (top + $t.height() < scrollTop) {
+        $t.removeClass('reveal_pending').addClass('reveal_visible');
       } else {
-        el.removeClass("in-view");
+        $t.addClass('reveal_pending');
+        if (!rafId) requestAnimationFrame(reveal);  
       }
     }
+  });
+}
+function reveal() {
+  rafId = null;
+  var now = performance.now();
+  
+  if (now - lTime > delay) {
+    lTime = now;
+    var $ts = $('.reveal_pending');
+    $($ts.get(0)).removeClass('reveal_pending').addClass('reveal_visible');  
   }
+  
+  
+  if ($('.reveal_pending').length >= 1) rafId = requestAnimationFrame(reveal);
+}
 
-  var items = document.querySelectorAll(
-    "*[data-animate-in], *[data-detect-viewport]"
-  ),
-    waiting = false,
-    w = $(window);
-
-  w.on("resize scroll", function() {
-    if (waiting) {
-      return;
-    }
-    waiting = true;
-    detection();
-
-    setTimeout(function() {
-      waiting = false;
-    }, 100);
-  });
-
-  $(document).ready(function() {
-    setTimeout(function() {
-      detection();
-    }, 500);
-
-    for (var i = 0; i < items.length; i++) {
-      var d = 0,
-        el = $(items[i]);
-      if (items[i].getAttribute("data-animate-in-delay")) {
-        d = items[i].getAttribute("data-animate-in-delay") / 1000 + "s";
-      } else {
-        d = 0;
-      }
-      el.css("transition-delay", d);
-    }
-  });
+$(scroll);
+$(window).scroll(scroll);
+$(window).click(function() {
+  $('.reveal').removeClass('reveal_visible').removeClass('reveal_pending');
+  lTime = performance.now() + 500;
+  var top = $(window).scrollTop();
+  $(window).scrollTop(top === 0 ? 1 : top-1);
 });
-
+// --------------------------------------------------------------------------------ON-Scroll-Reveal-Library
 
 // --------------------------------------------------------------------------------particles
 

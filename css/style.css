@@ -931,7 +931,7 @@ color: #1092B2;
 
 /*Animations*/
 
-[data-animate-in] {
+/* [data-animate-in] {
   opacity: 0;
   transition: transform 0.8s ease, opacity 0.8s ease
 }
@@ -977,7 +977,7 @@ color: #1092B2;
   opacity: 1;
   transition: none;
   transform: none
-}
+} */
 
 
 /* -------------------------------------------------------------------------------------------------animation cubes------------------------------- */
@@ -1033,7 +1033,57 @@ color: #1092B2;
 template {
   display: block !important;
 }
-
+/* -------------------------------------------------------------------------------------------scroll-fade-in-css */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 100px, 0);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.reveal_visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.box {
+  background: #2ecc40;
+  margin: 2%;
+  border-radius: 10px;
+  display: inline-block;
+}
+.small .box {
+  width: 20%;
+  padding-bottom: 20%;
+}
+.small .box:nth-of-type(1) {
+  background: #3d9970;
+}
+.small .box:nth-of-type(2) {
+  background: #0074d9;
+}
+.small .box:nth-of-type(3) {
+  background: #7fdbff;
+}
+.small .box:nth-of-type(4) {
+  background: #39cccc;
+}
+.medium .box {
+  width: 44%;
+  padding-bottom: 25%;
+}
+.medium .box:nth-of-type(2) {
+  background: #001f3f;
+}
+.medium .box:nth-of-type(3) {
+  background: #ffdc00;
+}
+.medium .box:nth-of-type(4) {
+  background: #ff4136;
+}
+.big .box {
+  background-color: #01ff70;
+  width: 94%;
+  padding-bottom: 30%;
+}
+/* -------------------------------------------------------------------------------------------scroll-fade-in-css */
 /* @import "compass/css3";
 {
 	 margin: 0;
@@ -1192,6 +1242,18 @@ body [class*="cube"] {
   top: 0px;
   z-index: -1;
   width: 180px;
+}
+.hero-wrapper {
+  height: 530px;
+}
+.work-heading h1 {
+  font-size: 25px;
+}
+.work-heading p {
+  width: 90%;
+}
+.accordion {
+  width: 97%;
 }
  }
 
