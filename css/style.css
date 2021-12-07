@@ -1043,13 +1043,13 @@ template {
 body [class*="cube"] {
 	 position: absolute;
 }
- .cube {
+ /* .cube {
   top: 24%;
   left: 70%
 	 transform-style: preserve-3d;
 	 font-size: 8vmin;
 	 animation: ani 8s ease-in-out infinite;
-}
+} */
  .cube__face {
 	 margin: -2em;
 	 width: 4em;
