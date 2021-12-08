@@ -1531,6 +1531,13 @@ body [class*="cube"] {
   font-family: Montserrat-bold;
   font-size: 22px;
 }
+.card-group-wrapper {
+  padding-top: 0px;
+}
+.card-header {
+  padding: 0.75rem 1.05rem;
+
+}
 }
 
 /* Landscape phone to portrait tablet */
@@ -1600,6 +1607,9 @@ body [class*="cube"] {
   color: #1092B2;
   font-family: Montserrat-bold;
   font-size: 22px;
+}
+.card-group-wrapper {
+  padding-top: 0px;
 }
  }
 
