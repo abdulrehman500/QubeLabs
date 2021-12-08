@@ -529,7 +529,7 @@
                         <div class="footer-widget-heading">
                           <h3>Contacts</h3>
                         </div>
-                        <div class="footer-text footer-content mb-25 ">
+                        <div class="footer-texts footer-text-custom footer-content mb-25 ">
                           <p>One Ferry Building, Suite 255.
                             <br>
                             San Francisco, CA 94111
@@ -711,12 +711,12 @@ function reveal() {
 
 $(scroll);
 $(window).scroll(scroll);
-$(window).click(function() {
-  $('.reveal').removeClass('reveal_visible').removeClass('reveal_pending');
-  lTime = performance.now() + 500;
-  var top = $(window).scrollTop();
-  $(window).scrollTop(top === 0 ? 1 : top-1);
-});
+// $(window).click(function() {
+//   $('.reveal').removeClass('reveal_visible').removeClass('reveal_pending');
+//   lTime = performance.now() + 500;
+//   var top = $(window).scrollTop();
+//   $(window).scrollTop(top === 0 ? 1 : top-1);
+// });
 // --------------------------------------------------------------------------------ON-Scroll-Reveal-Library
 
 // --------------------------------------------------------------------------------particles
@@ -852,7 +852,7 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
-// --------------------------------------------------------------------------------particles
+// ----------------------------------------------------------------------------------------------------Particles
 var observer = new IntersectionObserver(function(entries) {
   alert("s");
   entries.forEach(e =>{

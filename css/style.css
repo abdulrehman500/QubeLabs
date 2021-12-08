@@ -957,6 +957,13 @@ ul {
   line-height: 20px;
   font-family: Montserrat-Medium;
 }
+.footer-texts p {
+  margin-bottom: 14px;
+  font-size: 10px;
+      color: #7e7e7e;
+  line-height: 20px;
+  font-family: Montserrat-Medium;
+}
 .footer-social-icon span {
   color: #fff;
   display: block;
@@ -1465,16 +1472,20 @@ body [class*="cube"] {
     margin-left: 46px;
 }
 .footer-widget-heading h3 {
-  margin-left: 42px;
+  margin-left: 52px;
+}
+.footer-text-custom p{
+  margin-left: 50px;
+}
+.footer-content li {
+  margin-left: 10px;
 }
 .footer-text p {
- margin-left: 42px;
+ margin-left: 2px;
 }
 .subscribe-form input {
-  
-  width: 180px;
-  margin-left: 12px;
-
+  width: 280px;
+  margin-left: 50px;
 }
 .blue-btn {
  
