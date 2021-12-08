@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
       if (window.scrollY > 0) {
         document.getElementById('navbar').classList.add('fixed-top');
+        document.getElementById('navbar').classList.add('container');
         // add padding top to show content behind navbar
         navbar_height = document.querySelector('.navbar').offsetHeight;
         document.body.style.paddingTop = navbar_height + 'px';
