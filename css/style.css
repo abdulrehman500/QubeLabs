@@ -15,8 +15,43 @@
   }
  
 
+* {
+  outline: none;
+}
 
+/* ---------------------------------------------------------------------------------------------------------------Arrow - Icons - rotate */
 
+.rotate1 {
+  position: absolute;
+  right: 15px;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  margin-left: auto !important;
+  top: 18px;
+  /* border:1px solid red; */
+  /* padding-left: 130px; */
+  /* margin-left: 120px; */
+  display: block;
+  -moz-transform:rotate(0deg);
+  -webkit-transform:rotate(0deg);
+  transform:rotate(0deg);
+  color: #1092B2;
+}
+.rotate1.down {
+  -moz-transform:rotate(0deg);
+  -webkit-transform:rotate(0deg);
+  transform:rotate(90deg);
+}
+.containers {
+  position: relative;
+}
+.card-header {
+
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+/* ---------------------------------------------------------------------------------------------------------------Arrow - Icons - rotate */
 /* ---------------------------------------------------------------------------------------------------------------ice-cubes */
 @keyframes turn {
   from { transform: rotate3d(0, 0, 0, 0); }
@@ -107,10 +142,13 @@
  #navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #02293E !important;
     text-align: center;
     padding: 14px;
+ 
+    font-size: 1rem;
     text-decoration: none;
+    
   }
   .nav-link::before {
     transition: 300ms;
@@ -369,15 +407,16 @@ margin: 0px 12px;
   background-color: #81C1E1;
   color: white;
 }
+
 .nav-icons .btn{
   background-color: #1092B2;
   color: white;
-  padding: 4px 32px;
+  padding: 12px 48px;
   border: none;
   border-radius: 5px;
   margin: 9px 7px;
-  font-size: 14px;
-font-family: 'Montserrat-regular', sans-serif;
+  font-size: 1rem;
+  font-family: 'Montserrat-regular', sans-serif;
   font-weight: 300;
 }
 .nav-item a {
@@ -400,13 +439,15 @@ color: #02293E  !important;
     font-family: Montserrat-bold;
     width: 90%;
     line-height: 50px;
+    font-size: 2.125rem;
 }
 .banner-inner-text p {
     
     font-family: Montserrat-Medium;
     width: 97%;
     color: #707070;
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 0.9375rem;
     margin: 22px 0px;
     /* line-height: 50px; */
 }
@@ -676,9 +717,12 @@ color: #02293E  !important;
   color: white;
 }
 .banner-btn {
+  font-size: 1rem;
+  margin-top: 12px;
+  font-family: Montserrat-Medium;
 background-color: #1092B2;
 color: rgb(250, 248, 248);
-padding: 6px 28px;
+padding: 12px 30px;
 border-radius: 6px;
 }
 .work-with-us {
@@ -735,9 +779,28 @@ border-radius: 6px;
   margin: 0px;
 }
 .work-heading p {
-  width: 40%;
+  width: 70%;
+  font-family: Montserrat-Medium;
   margin-left: auto;
   margin-right: auto;
+  /* margin-bottom: 40px; */
+  color: #02293E;
+  font-size: 1rem;
+}
+.staking-heading p {
+  width: 70%;
+  font-family: Montserrat-Medium;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  color: #02293E;
+  font-size: 1rem;
+}
+.staking-heading h1 {
+  font-size: 2.875rem;
+  font-family: Montserrat-bold;
+  color: #1092B2;
+  margin-bottom: 24px;
 }
 .main-content2 {
   padding-top: 40px;
@@ -768,6 +831,7 @@ border-radius: 6px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(236, 239, 244, 0.3);
+  padding-bottom: 80px;
 }
 .what-wrapper {
   position: relative;
@@ -807,7 +871,7 @@ border-radius: 6px;
 margin: 1px 12px;
 }
 .work-heading h1 {
-    font-size: 46px;
+    font-size: 2.875rem;
     font-family: Montserrat-bold;
     color: #1092B2;
 }
@@ -842,16 +906,18 @@ margin: 1px 12px;
 
 .card-title-text1 {
     color: #1092B2;
+    font-size: 1.375rem;
     font-family: Montserrat-Medium;
 }
 .card-title-text2 {
     color: #FE7D1E;
     font-family: Montserrat-Medium;
-    
+    font-size: 1.375rem;
 }
 .card-title-text3 {
     color: #1092B2;
     font-family: Montserrat-Medium;
+    font-size: 1.375rem;
 }
 .card-1 {
     border: 2px solid #D6DFF6 !important;
@@ -859,11 +925,11 @@ margin: 1px 12px;
     border-radius: 10px !important;
     margin-right:50px;
     margin-left: 50px;
-    background-color: #ffffff !important;
+    background-color: #F6F7F9 !important;
     border-radius: 8px;
 }
 .card-inner-text {
-    font-size: 12px;
+    font-size: 0.800rem;
     font-family: Montserrat-regular;
     color: #02293E;
 }
@@ -874,11 +940,11 @@ margin-top: 90px;
 
 }
 .tabs-body-text h5 {
-  font-size: 26px;
+  font-size: 2rem;
   font-family: Montserrat-bold;
 }
 .tabs-body-text {
-  font-size: 12px;
+  font-size: 1rem;
   font-family: Montserrat-regular;
 }
 .card-2 .btn-stake:hover {
@@ -891,6 +957,9 @@ margin-top: 90px;
     color: white;
     border-radius: 6px;
     border: none;
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-family: Montserrat-Medium;
 }
 .card-2 .media img  {
     border-radius: 12px;
@@ -898,8 +967,9 @@ margin-top: 90px;
     margin-bottom: 12px;
 }
 .card-2 {
- 
-  box-shadow: 0 0px 12px #00000015;
+   border-radius: 10px !important;
+  border: 2px solid #D6DFF6 !important;
+    box-shadow: 0 0px 12px #00000015;
     margin-right:50px;
     margin-left: 50px;
     background-color: #F8FAFD !important;
@@ -917,11 +987,17 @@ margin-top: 90px;
     color: white;
     border-radius: 6px;
     border: none;
-    padding: 5px 50px;
+    padding: 12px 50px;
+    font-family: Montserrat-Medium;
     margin: 10px 0px;
 }
 
 /* ----------------------footer-css----------------------- */
+.heading-footer {
+  color: #1092B2;
+  font-family: Montserrat-bold;
+  font-size: 3.375rem;
+}
 ul {
     margin: 0px;
     padding: 0px;
@@ -964,23 +1040,30 @@ ul {
   background-position: 100% 100%;
 }
 .footer-logo {
-  margin-bottom: 12px;
+  margin-bottom: 2px;
 }
 .footer-logo img {
     max-width: 150px;
-  
+   margin-top: -12px;
 }
 .footer-text p {
   margin-bottom: 14px;
-  font-size: 10px;
-      color: #7e7e7e;
+  font-size: 0.680rem;
+      color: #02293E;
   line-height: 20px;
   font-family: Montserrat-Medium;
 }
-.footer-texts p {
+.footer-texts p span {
   margin-bottom: 14px;
-  font-size: 10px;
-      color: #7e7e7e;
+  font-size: 0.975rem;
+   color: #02293E;
+  line-height: 20px;
+  font-family: Montserrat-Medium;
+}
+.footer-texts p  {
+  margin-bottom: 14px;
+  font-size: 0.670rem;
+   color: #02293E;
   line-height: 20px;
   font-family: Montserrat-Medium;
 }
@@ -1015,7 +1098,7 @@ ul {
 }
 .footer-widget-heading h3 {
   /* color: #fff; */
-  font-size: 14px;
+  font-size: 0.900rem;
   font-weight: 500;
   /* margin-bottom: 10px; */
   margin-top: 10px;
@@ -1046,7 +1129,7 @@ ul {
 .footer-widget ul li a {
   color: #02293E;
   text-transform: capitalize;
-  font-size: 12px;
+  font-size: 0.700rem;
   font-family: Montserrat-Medium;
 }
 .subscribe-form {
@@ -1089,8 +1172,8 @@ ul {
   margin: 0;
   margin-left: 50px;
   margin-top: 50px;
-  font-size: 14px;
-  color: #878787;
+  font-size: 0.80rem;
+  color: #02293E;
 }
 .copyright-text p a{
   color: #ff5e14;
@@ -1158,7 +1241,7 @@ ul {
   color: #02293E;
   width: 90%;
   margin-top: 14px;
-  font-size: 13px;
+  font-size: 1.005rem;
 }
 .send-btn:hover {
   text-decoration: none;
@@ -1170,7 +1253,8 @@ ul {
     color: white;
     border-radius: 6px;
     border: none;
-    padding: 5px 69px;
+    padding: 12px 69px;
+    font-size: 1rem;
     
 }
 /* ----------------------footer-css----------------------- */
@@ -1188,18 +1272,18 @@ ul {
 
 .accordion .card-header:after {
   font-family: 'FontAwesome';  
-  content: "\f107";
+  /* content: "\f107"; */
   float: right; 
   color: #1092B2;
-
+  transition: all 0.4s ease;
 }
 
 .accordion .card-header.collapsed:after {
 
   font-family: 'FontAwesome';  
-  content: "\f054"; 
+  /* content: "\f054";  */
 
-
+  transition: all 0.4s ease;
 }
 .accordion {
   width: 80%;
@@ -1207,8 +1291,12 @@ ul {
   margin-right: auto;
 }
 .card-header {
-  box-shadow: #02293E;
+
   margin-bottom: 112px;
+  background-color: #F6F7F9 !important;
+  border-radius: 10px !important;
+  border: 2px solid #D6DFF6 !important;
+    box-shadow: 0 0px 12px #00000015;
 }
 .accordion .card .card-header {
   border-radius: 6px !important;
@@ -1221,6 +1309,11 @@ ul {
 
   /* background-color: unset !important; */
  
+}
+.card-header a {
+  color: #02293E;
+  font-family: Montserrat-Medium;
+  font-size: 1rem;
 }
 .staking-btn {
   background-color: #1092B2;
@@ -1238,6 +1331,8 @@ ul {
 /* ----------------------invest-css----------------------- */
 .invest-title-text {
 color: #1092B2;
+font-size: 1.315rem;
+font-family: Montserrat-Medium;
 }
 .btn-view:hover {
   text-decoration: none;
@@ -1249,7 +1344,7 @@ color: #1092B2;
   color: white;
   border-radius: 6px;
   border: none;
-  padding: 5px 19px;
+  padding: 12px 19px;
   width: 220px;
   margin-left: auto;
   margin-right: auto;
@@ -1646,9 +1741,48 @@ body [class*="cube"] {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {  }
+@media screen and (min-width: 1400px) {
+  .container {
+    /* width: 1570px !important; */
+    /* border: 2px solid red !important; */
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    /* width: 1570px !important; */
+    /* border: 2px solid red !important; */
+  }
+}
+@media screen and (min-width: 1900px) {
+  .container {
+    max-width: 1500px !important;
+  
+  }
+  .bg-icons2 {
+    width: 450px;
+}
+.bg-icons3 {
+  
+  width: 450px;
+  margin: 50px;
+}
+.bg-icons {
+  width: 450px;
+}
+.fixed-top {
 
-/* Large desktop */
-@media (min-width: 1200px) {  }
-
-
+  width: 1500px !important;
+}
+.nav-icons ul {
+  margin-top: 12px !important;
+}
+.card-inner-text {
+  font-size: 0.9rem;
+  font-family: Montserrat-regular;
+  color: rgb(2, 41, 62);
+}
+.banner-wrapper {
+  margin: 80px 32px;
+}
+}
 /* ---------------------------------------------------------------------------------------Media-query-css----------------------- */
