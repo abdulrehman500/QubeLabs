@@ -146,7 +146,7 @@
     text-align: center;
     padding: 14px;
  
-    font-size: 1rem;
+    font-size: 0.800rem;
     text-decoration: none;
     
   }
@@ -396,7 +396,7 @@ margin: 0px 12px;
     margin-left: 9px;
     margin-right: 9px;
     width: 19.56px;
-    margin-top: 12px;
+    margin-top: 24px;
       
 }
 .nav-icons {
@@ -1272,7 +1272,7 @@ ul {
 
 .accordion .card-header:after {
   font-family: 'FontAwesome';  
-  /* content: "\f107"; */
+  content: "\f107";
   float: right; 
   color: #1092B2;
   transition: all 0.4s ease;
@@ -1281,7 +1281,7 @@ ul {
 .accordion .card-header.collapsed:after {
 
   font-family: 'FontAwesome';  
-  /* content: "\f054";  */
+  content: "\f054"; 
 
   transition: all 0.4s ease;
 }
@@ -1771,7 +1771,7 @@ body [class*="cube"] {
 }
 .fixed-top {
 
-  width: 1500px !important;
+  width: 1470px !important;
 }
 .nav-icons ul {
   margin-top: 12px !important;
@@ -1783,6 +1783,21 @@ body [class*="cube"] {
 }
 .banner-wrapper {
   margin: 80px 32px;
+}
+#navbar a {
+  float: left;
+  display: block;
+  color: #02293E !important;
+  text-align: center;
+  padding: 14px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.nav-icons ul li img {
+  margin-left: 9px;
+  margin-right: 9px;
+  width: 19.56px;
+  margin-top: 12px;
 }
 }
 /* ---------------------------------------------------------------------------------------Media-query-css----------------------- */
