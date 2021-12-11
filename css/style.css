@@ -1275,14 +1275,21 @@ ul {
   content: "\f107";
   float: right; 
   color: #1092B2;
+  /* margin-top: 2px; */
+  font-size: 20px;
+   /* font-size: 20px; */
+   /* font-weight: 900; */
   transition: all 0.4s ease;
 }
-
+i{
+  /* font-size: 23px !important; */
+  float: right;
+}
 .accordion .card-header.collapsed:after {
-
   font-family: 'FontAwesome';  
-  content: "\f054"; 
-
+  font-weight: 900 !important;
+  content: "\f105"; 
+  font-size: 14pt;
   transition: all 0.4s ease;
 }
 .accordion {
